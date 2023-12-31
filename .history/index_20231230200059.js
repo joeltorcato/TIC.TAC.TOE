@@ -1,7 +1,6 @@
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
-
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -28,7 +27,7 @@ function initializeGame() {
 function cellClicked() {
     const cellIndex = parseInt(this.getAttribute("cellIndex"));
 
-    if (!running || options[cellIndex] !== "") {
+    if (options[cellIndex] !== "" || !running) {
         return;
     }
 
@@ -48,23 +47,19 @@ function changePlayer() {
 }
 
 function checkWinner() {
-    let roundWon = false;
-
-    for (const condition of winConditions) {
-        const [a, b, c] = condition;
+    for (let i = 0; i < winConditions.length; i++) {
+        const [a, b, c] = winConditions[i];
         const cellA = options[a];
         const cellB = options[b];
         const cellC = options[c];
 
         if (cellA === currentPlayer && cellB === currentPlayer && cellC === currentPlayer) {
-            roundWon = true;
-            break;
+            announceWinner();
+            return;
         }
     }
 
-    if (roundWon) {
-        announceWinner();
-    } else if (!options.includes("")) {
+    if (!options.includes("")) {
         statusText.textContent = "Draw!";
         running = false;
     }
