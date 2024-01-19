@@ -52,7 +52,6 @@ function updateCell(cell, index) {
 // Function to change the player
 function changePlayer() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    updateStatusText();
 }
 
 // Function to check for a winner
@@ -82,6 +81,7 @@ function checkWinner() {
 // Function to announce the winner
 function announceWinner() {
     statusText.textContent = `${currentPlayer} wins!`;
+    console.log(`${currentPlayer} wins!`);
     running = false;
 }
 
