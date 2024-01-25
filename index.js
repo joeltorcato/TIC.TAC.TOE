@@ -41,6 +41,7 @@ function cellClicked() {
     updateCell(this, cellIndex);
     checkWinner();
     changePlayer();
+    updateStatusText();
 }
 
 // Function to update a cell
@@ -75,14 +76,15 @@ function checkWinner() {
     } else if (!options.includes("")) {
         statusText.textContent = "Draw!";
         running = false;
+        breakGame();
     }
 }
-
 // Function to announce the winner
 function announceWinner() {
     statusText.textContent = `${currentPlayer} wins!`;
     console.log(`${currentPlayer} wins!`);
     running = false;
+    breakGame();
 }
 
 // Function to restart the game
