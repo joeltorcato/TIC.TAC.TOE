@@ -1,9 +1,9 @@
-// Selecting game elements
+// selecting game elements
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
 
-// Winning conditions
+// winning conditions
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -15,22 +15,22 @@ const winConditions = [
     [2, 4, 6],
 ];
 
-// Game state
+// game state
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = true;
 
-// Initialize the game
+// initialize the game
 initializeGame();
 
-// Function to initialize the game
+// function to initialize the game
 function initializeGame() {
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
     updateStatusText();
 }
 
-// Function called when a cell is clicked
+// function called when a cell is clicked
 function cellClicked() {
     const cellIndex = parseInt(this.getAttribute("cellIndex"));
 
@@ -44,18 +44,18 @@ function cellClicked() {
     updateStatusText();
 }
 
-// Function to update a cell
+// function to update a cell
 function updateCell(cell, index) {
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
 }
 
-// Function to change the player
+// function to change the player
 function changePlayer() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
 
-// Function to check for a winner
+// function to check for a winner
 function checkWinner() {
     let roundWon = false;
 
@@ -79,7 +79,7 @@ function checkWinner() {
         breakGame();
     }
 }
-// Function to announce the winner
+// function to announce the winner
 function announceWinner() {
     statusText.textContent = `${currentPlayer} wins!`;
     console.log(`${currentPlayer} wins!`);
@@ -87,7 +87,7 @@ function announceWinner() {
     breakGame();
 }
 
-// Function to restart the game
+// function to restart the game
 function restartGame() {
     options = ["", "", "", "", "", "", "", "", ""];
     currentPlayer = "X";
@@ -100,7 +100,7 @@ function restartGame() {
     updateStatusText();
 }
 
-// Function to update the status text
+// function to update the status text
 function updateStatusText() {
     statusText.textContent = `${currentPlayer}'s turn`;
 }

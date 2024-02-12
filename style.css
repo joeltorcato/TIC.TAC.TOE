@@ -1,65 +1,66 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* body */
 body {
-    background-color: #f8f8f8;
-    font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  font-family: "Arial", sans-serif;
 }
 
 /* game container */
 #gameContainer {
-    font-family: "Permanent Marker", cursive;
-    text-align: center;
-    margin: 50px auto;
+  font-family: "Permanent Marker", cursive;
+
+  text-align: center;
+  margin: 50px auto;
+}
+
+#gameContainer h1 {
+  font-size: 33px;
 }
 
 /* cell */
 .cell {
-    width: 75px;
-    height: 75px;
-    border: 2px solid #333;
-    box-shadow: 0 0 0 0 2px #333;
-    line-height: 75px;
-    font-size: 50px;
-    cursor: pointer;
+  width: 75px;
+  height: 75px;
+  border: 2px solid #000;
+  box-shadow: 0 0 0 0 2px #000;
+  line-height: 75px;
+  font-size: 50px;
+  cursor: pointer;
 }
 
 /* cell container */
 #cellContainer {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 5px;
-    width: 225px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 5px;
+  width: 225px;
+  margin: auto;
 }
 
 /* add hover effect for better user interaction */
 .cell:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 /* status text */
 #statusText {
-    margin-top: 20px;
-    font-size: 18px;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
 /* restart button */
 #restartBtn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-#restartBtn:hover {
-    background-color: #555;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  color: black;
+  border: 1px solid black;
+  border-radius: 35px;
+  font-family: "Permanent Marker", cursive;
 }
