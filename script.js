@@ -74,15 +74,14 @@ function checkWinner() {
     if (roundWon) {
         announceWinner();
     } else if (!options.includes("")) {
-        statusText.textContent = "Draw!";
+        statusText.textContent = "DRAW!";
         running = false;
         breakGame();
     }
 }
 // function to announce the winner
 function announceWinner() {
-    statusText.textContent = `${currentPlayer} wins!`;
-    console.log(`${currentPlayer} wins!`);
+    statusText.textContent = `${currentPlayer} WINS!`;
     running = false;
     breakGame();
 }
@@ -102,5 +101,5 @@ function restartGame() {
 
 // function to update the status text
 function updateStatusText() {
-    statusText.textContent = `${currentPlayer}'s turn`;
+    statusText.textContent = `${currentPlayer}'S TURN`;
 }

@@ -6,30 +6,29 @@
 
 /* body */
 body {
-  background-color: #f8f8f8;
-  font-family: "Arial", sans-serif;
+  color: blue;
+  background-color:white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#statusText {
+  color: black;
 }
 
 /* game container */
 #gameContainer {
-  font-family: "Permanent Marker", cursive;
-
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
-  margin: 50px auto;
-}
-
-#gameContainer h1 {
-  font-size: 33px;
+  margin: 150px;
 }
 
 /* cell */
 .cell {
-  width: 75px;
-  height: 75px;
-  border: 2px solid #000;
-  box-shadow: 0 0 0 0 2px #000;
-  line-height: 75px;
-  font-size: 50px;
+  width: 90px;
+  height: 90px;
+  border: 1px solid black;
+  line-height: 90px;
+  font-size: 65px;
   cursor: pointer;
 }
 
@@ -37,30 +36,27 @@ body {
 #cellContainer {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 5px;
-  width: 225px;
+  gap: 3px;
+  width: 255px;
   margin: auto;
-}
-
-/* add hover effect for better user interaction */
-.cell:hover {
-  background-color: #ddd;
 }
 
 /* status text */
 #statusText {
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 25px;
+  margin-right: -10px;
+  font-size: 20px;
 }
 
 /* restart button */
 #restartBtn {
-  margin-top: 10px;
-  padding: 10px 20px;
+  margin-right: -10px;
+  margin-top: 25px;
+  padding: 15px 25px;
   font-size: 15px;
   cursor: pointer;
   color: black;
   border: 1px solid black;
-  border-radius: 35px;
-  font-family: "Permanent Marker", cursive;
+  border-radius: 45px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
